@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'sinatra-flash'
-gem 'sinatra-activerecord'
 gem 'pg'
+gem 'sinatra-activerecord'
+
 gem 'activerecord'
 gem 'rake'
