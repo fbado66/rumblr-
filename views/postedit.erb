@@ -1,0 +1,29 @@
+
+<form action="/updatepost<%=@post_userid%>/<%=@post_id%>" method="POST">
+ <div  id="addPostModal">
+  <div class="modal-dialog modal-lg">
+   <div class="modal-content">
+    <div class="modal-header bg-primary text-white">
+      <h5 class="modal-title">Title  Add Post</h5>
+      <button class="close" data-dismiss="modal"><span>&times;</span></button>
+    </div>
+    <div class="modal-body">
+     <div class="form-group">
+      <label for="title">  </label>
+        <input name="title" value=<%= @post_title %> type="text" class="form-control">
+     </div>
+     
+     <div class="form-group">
+      <label for="body">Description</label>
+       <textarea class="form-control" name="description"><%= @post_description  %></textarea>
+     </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button id="create_post" class="btn btn-warning">Save Changes</button>
+    </div>
+   </div>
+  </div>
+</div>
+</form>
+

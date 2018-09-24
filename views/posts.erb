@@ -1,0 +1,15 @@
+
+
+
+<% userposts.each do |userpost| %>
+   
+     <%= userpost.title %>
+   
+  
+    <h5 class="card-title"><%= userpost.classification %></h5>
+    <p class="card-text"><%= userpost.description %></p>
+    <a href="/userpost/<%= userpost.user_id %>/<%= userpost.id %>" class="btn btn-primary">Edit</a>
+   
+
+
+<% end %>
