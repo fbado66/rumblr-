@@ -1,64 +1,43 @@
-
-
-      <h6>All Posts</h6>
-      <a href="/alluserposts" class="btn btn-outline-light btn-sm">View</a>
- Total: <%= @all_post %>
-
-      <br><br>
-  
-       <h6>Post created by You</h6>
-  
-       <a href="/userpost" class="btn btn-outline-light btn-sm">View</a>
-  Total: <%= @current_post %>
- 
-      
-
-      
-      
-
-
-
- <!-- POST MODAL -->
- <form action="/show_content" method="POST">
- 
-
-
-       
-         <h5 class="modal-title">Add Post</h5>
-       </div>
-
-       <div class="modal-body">
-
-           <div class="form-group">
-             <label for="title">Title</label>
-             <input name="title" type="text" class="form-control">
-           </div>
-          <div>
-             <label for="body">class</label>
-              <textarea class="form-control" name="classification"> </textarea>
-            </div>
-
-              <div>
-             <label for="body">Body</label>
-              <textarea class="form-control" name="description"> </textarea>
-            </div>
-
-       </div>
-
-
-       <div class="modal-footer">
-         <button class="btn btn-secondary" data-dismiss="modal">Create</button>
-           
-       </div>
-
+<div class="row">
+ <div class="col m8 s10 offset-m2">
+  <form action="/show_content" method="POST">
+   <h5 class="title">Add Post</h5>
+     <div class="body">
+       <label for="title">Title</label>
+       <input name="title" type="text">
      </div>
-   </div>
+     <div>
+       <label for="body">class</label>
+       <textarea name="classification"> </textarea>
+     </div>
+     <div>
+       <label for="body">Body</label>
+       <textarea name="description"> </textarea>
+     </div>
+     <div class="footer">
+        <button class="btn btn-secondary">Create Post</button>
+     </div>
+  </form>
  </div>
+</div>
 
-</form>
 <br><br>
 
-      <a href="/my_page" class="btn btn-outline-light btn-sm">My Page</a>
+<div class="row">
+<div class='col m8 offset-m2'>
+<div><h6>All Posts</h6>
+  <a href="/alluserposts" class="btn btn-outline-light btn-sm">View</a>
+  Total: <%= @all_post %>
+  <br><br>
+  <h6>Post created by You</h6>
+  <a href="/userpost" class="btn btn-outline-light btn-sm">View</a>
+  Total: <%= @current_post %>
+  <br><br><br>  
+  <a href="/my_page" class="btn btn-outline-light btn-sm right">My Page</a>
+ </div>
+ </div>
+</div>
+
 
 
 

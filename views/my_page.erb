@@ -1,6 +1,4 @@
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
 
 <ul>
 <% user = current_user %>
@@ -13,29 +11,24 @@
           <p> Password: <%= user.password %></p>
         </div>
         <div class="card-action">
-        <p>first_name: <%= user.first_name %><br>
-</p>
-       <p>     last_name: <%= user.last_name %><br>
-</p>
-       <p>     email: <%= user.email %> <br>
-</p>
-       <p> birthday: <%= user.birthday %></p>
-         
+        <p>First Name: <%= user.first_name %><br></p>
+       <p> Last Name: <%= user.last_name %><br></p>
+       <p> Email: <%= user.email %> <br></p>
+       <p> Birthday: <%= user.birthday %></p>
         </div>
       </div>
     </div>
   </div>
     </li>
-
 </ul>       
 
-
-
-
-       <a href="/deleteaccount" class="button button-primary">DELETE ACCOUNT</a> <br>
-       <a href="/logout" class="button button-primary">Logout</a> <br>
-       <a href="/post_display" class="button button-primary">Create Post</a> <br>
-
+<div class="row">
+  <div class="col m10 offset-m1">
+   <a href="/deleteaccount" class="button button-primary">DELETE ACCOUNT</a> 
+   <a href="/logout" class="button button-primary">Logout</a> 
+   <a href="/post_display" class="button button-primary">Create Post</a> 
+ </div>
+</div>
 
     
 

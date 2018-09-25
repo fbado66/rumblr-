@@ -50,7 +50,6 @@ get '/logout' do
     redirect '/'
 end 
 
-
 get '/sign_in' do
   erb :sign_in
 end
@@ -87,7 +86,6 @@ get '/post_display' do
   @userpost = @user.userposts
   @current_post = @userpost.count
   erb :show_content
-
 end 
 
 post '/show_content' do
@@ -116,7 +114,6 @@ get '/userpost' do
   @user = User.find_by(id: session[:user_id])
   @userpost= @user.userposts
   erb :userpost 
-  
 end 
 
 get '/alluserposts' do
@@ -124,13 +121,6 @@ get '/alluserposts' do
   @all_post = @userpost.count
 	erb :alluserposts 
 end
-
-get '/user/post' do
-  @user = User.find_by(id: session[:user_id])
-  @userpost= @user.userposts
-  erb :userpost 
-end
-
 
 get '/deleteaccount' do
   @user = User.find(session[:user_id])
@@ -143,13 +133,11 @@ delete '/deleteaccount' do
   redirect '/logout'
 end
 
-
 get '/users' do
    @users = User.all
 	 erb :users 
  end
 
- 
 get '/post_update' do
   @userpost = Userpost.all
  	@all_post= @userpost.count
@@ -172,7 +160,6 @@ get '/my_page' do
   erb :my_page
 end 
 
-
 get '/kill' do
   if session[:user_id]
     erb :kill
@@ -181,26 +168,17 @@ get '/kill' do
   end
 end
 
-
 post "/kill" do
-
   @user = User.find(session[:user_id])
     if userpost = @user.userposts.find_by(id: params[:somethingelse])
        userpost.destroy
        flash[:alert] = "post was sucessfully destroyed"
-
        redirect '/userpost'
     else 
        flash[:alert] = "Id for the blog, was not found, please check again the id as for the blog you wish to kill"
        redirect '/userpost'
     end 
 end 
-
-get '/posts' do
-  output = ''
-  output += erb :new_post
-  output
-end
 
 post '/userposts' do
   Userpost.create(

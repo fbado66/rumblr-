@@ -69,8 +69,6 @@ header a:hover{
 }
 
 
-
-
 .shadow_text{
   text-align: center!important;
   color: white;
@@ -78,7 +76,9 @@ header a:hover{
 }
 
 
-
+.logo{
+  margin-left: 1px;
+}
 
 .column:hover .switch{
   display: inline-block;

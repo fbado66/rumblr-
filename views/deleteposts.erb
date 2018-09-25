@@ -1,8 +1,4 @@
-
-
-
-    <%# a form that allows an order to be destroyed %>
-  <form action='/deletepost' method='POST' class='inline' >
+   <form action='/deletepost' method='POST' class='inline' >
     <input type='hidden' name='post_id' value='<%= @userpost.id %>'>
     <input type='hidden' name='_method' value='DELETE'>
     <input type='submit' value='destroy order' class='super-sport'>

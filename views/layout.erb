@@ -6,23 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pages</title>
     <link rel="stylesheet" href="/main.css">
-  
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 </head>
+
 <body>
-
   <div class = "mynavbar" id="navbar"> 
-    <a href="/">Home</a>
-
+  <a href="/" class="button button-primary">HOME</a> 
     <% if session[:user_id] %>
-      <a href="/logout">Logout</a>
-    <a href="/users">Users</a>
-
-      
+      <a href="/logout" class="button button-primary">LOG OUT</a> 
+        <a href="/users" class="button button-primary">USERS</a> 
     <% else %>
-      <a href="/sign_up">Signup</a>
-      <a href="/sign_in">Signin</a>
+      <a href="/sign_up" class="button button-primary">SIGN UP</a> 
+      <a href="/sign_in" class="button button-primary">SIGN IN</a> 
     <% end %>
   </div> 
 
