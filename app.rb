@@ -12,6 +12,7 @@ def current_user
   end
 end
 
+
 get '/' do
   erb :landing_page
 end
@@ -46,7 +47,7 @@ end
 
 get '/logout' do
   session[:user_id] = nil
-    flash[:info] = "you have successfully logged out."
+    
     redirect '/'
 end 
 
@@ -72,7 +73,7 @@ post '/sign_in' do
       redirect '/sign_in'
     else
       session[:user_id] = user.id
-      flash[:info] = "Signed in as #{user.username}."
+      flash[:info] = "SIGNED IN AS #{user.username}."
       redirect '/my_page'
     end
   end 
@@ -80,10 +81,10 @@ post '/sign_in' do
 get '/post_display' do
   user_id = session[:user_id]
   @user = User.find(user_id)
-  @userpost = Userpost.last(20)
+  @userpost = Userpost.all
   @all_post = @userpost.count
   @user = User.find_by(id: session[:user_id])
-  @userpost = @user.userposts
+  @userpost = @user.userposts.reverse
   @current_post = @userpost.count
   erb :show_content
 end 
@@ -105,19 +106,19 @@ get '/creating_post' do
   @userpost = Userpost.all
   @all_post = @userpost.count
   @user = User.find_by(id: session[:user_id])
-  @userpost= @user.userposts
+  @userpost= @user.userposts.reverse
   @current_post= @userpost.count
   erb :show_content
 end
 
 get '/userpost' do
   @user = User.find_by(id: session[:user_id])
-  @userpost= @user.userposts
+  @userpost= @user.userposts.reverse
   erb :userpost 
 end 
 
 get '/alluserposts' do
-  @userpost = Userpost.last(20)
+  @userpost = Userpost.last(20).reverse
   @all_post = @userpost.count
 	erb :alluserposts 
 end

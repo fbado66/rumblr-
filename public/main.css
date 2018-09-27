@@ -1,120 +1,34 @@
 #flash-info {
-  background-color: green;
+  background-color: #c5cae9;
   color: white;
   border-radius: 2px;
   font-size: 12px;
   padding: 15px;
 }
 
-#flash-error {
-  background-color: red;
-  color: white;
-  border-radius: 2px;
-  font-size: 12px;
-  padding: 15px;
-}
+
 
 #flash-alert {
-  background-color:pink;
+  background-color: #72142e;
   color: white;
   border-radius: 2px;
-  font-size: 12px;
+  font-size: 15px;
   padding: 15px;
 }
 
 body {
-  margin: 0;
-  background-color:#786D5F
-  ;
-}
-
-.supercenter{
-  text-align: center
-}
-section {
-  height: 670px;
-  padding: 2px;
-  text-align: center;
-}
-
-header {
-  height: 670px;
-  font-family: sans-serif;
-  text-align: right;
-}
-
-header a{
-  font-size: 16px;    
-}
-
-header ul{
-  margin: 0;
-  padding: 2px;
-}
-
-header li{
-  padding: 0 20px; 
-  display: inline;
-}
-
-header nav {
-  float: right; 
-  padding: 10px; 
-  margin-top: 0px; 
-}
-
-header a:hover{
-  color: red; 
-  font-weight: bold; 
-}
+  background-image: linear-gradient(#0f2a56, #72142e, #0f2a56, #72142e);
+ font-family: Roboto, Helvetica, Arial, sans-serif
+} 
 
 
 .shadow_text{
   text-align: center!important;
   color: white;
-
 }
 
-
-.logo{
-  margin-left: 1px;
-}
-
-.column:hover .switch{
-  display: inline-block;
+.landing{
   width: 80%;
-  height: 50%;
-  left: 10px;    
-}
-
-
-.container-4 {
-  margin-top: 30px; 
-  padding-top: 20px;
-  padding-left: 2px;
-  float: left;
-  color: white;
-}
-
-
-
-
-
-#section-2, #section-4 {
-  background-color: #131414; 
-}
-
-
-
-
-
-div h1 {
-  font-size: 35px; 
-  color: white; 
-  padding: 5px; 
-  margin: 0;
-  background:rgba(0, 0, 0, 0.5);
-  text-align: center;
 }
  
 h2 {
@@ -128,36 +42,11 @@ color: white;
 #navbar {
   position:sticky;
   top: 0;
-  width: 100%;
-  height: 50px;
-  font-size: 20px;
-  background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-  text-align: center;
+  padding-top: 10px;
+  margin-right: 10px;
+  text-align: right;
   z-index: 99;
   color: white; 
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-  
-a{
-  color: white; 
-  margin-right: 0px; 
-  padding: 5px;
-}
-
-
-
-
-li{ 
-  margin-right: 0;
 }
 
 h3 { 
@@ -180,13 +69,28 @@ span{
   color: white; 
 }
 
+.principal_font{
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+text-shadow: 6px 3px 0 rgb(58,80,217) , -5px 5px 0 #9b1637;
+font-size: 50px;
+font-weight: bold;
+color:#f5a623
+}
 
+.principal_font_2{
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+text-shadow: 6px 3px 0 rgb(58,80,217) , -5px 5px 0 #9b1637;
+font-size: 30px;
+font-weight: bold;
+color:#f5a623
+}
 
-
-
-
-
-
+.opening_caption{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 25px;
+  text-align: center; 
+  color: white;
+  }
 
 .text2{
 color: black
@@ -197,8 +101,21 @@ width: 3%!important
 }
 
 
+.buttom{
+  color: #f5a623!important
+}
 
 
+
+.hero-signin {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("images/sign_in.png");
+  height: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+    
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("images/fc_barcelona.jpg");
@@ -207,13 +124,47 @@ width: 3%!important
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  }
+  height: 450px;
+   margin-top: -50px;
+}
+  
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+        
+.logo{
+  position: absolute;
+  z-index: 999;
+  margin-top: -55px;
+  margin-left: 20px;
+  width: 120px!important
+}
 
-  .hero-signin {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("images/sign_in.png");
-    height: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    }
+.containerpost{
+ height: 200px!important
+ }
+
+.container_post {
+border: 2px,solid #72142e;
+background-color: #0f2a56;
+border-radius: 15px;
+padding: 16px;
+margin: 5px 0
+}
+        
+.postdiv{
+  height: 250px!important
+}
+
+
+.footer{
+text-align: right!important;
+color: white;
+margin-right: 18px;
+font-size: 12px;
+}

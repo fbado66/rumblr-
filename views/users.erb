@@ -1,22 +1,28 @@
-
-
+<br>
 <ul>
 <% @users.each do |user| %>
   <li>
   <div class="row">
-    <div class="col s12 m6">
-      <div class="card blue">
+    <div class="col s12 m4 offset-m2">
+      <div class="card transparent">
         <div class="card-content white-text">
-          <span class="card-title"> Username: <%= user.username %></span>
-          <p> First Name: <%= user.first_name %></p>
+          <span class="card-title" style="font-size:18px;text-align:center">No.  <%= user.id%>  <%= user.username %></span>
+         
         </div>
-        <div class="card-action">
-        <p> Last Name: <%= user.last_name %></p>
-       <p> Birthday: <%= user.birthday %></p>
+        <div class="card-action" style="line-height:0!important">
+         <p style="font-size:16px;color:white"> Name: <%= user.first_name %></p>
+        <p style="font-size:16px;color:white"> Last Name: <%= user.last_name %></p>
+       <p style="font-size:16px;color:white"> Birthday:  <%= user.birthday %></p>
         </div>
       </div>
     </div>
+    <br>
+    <div class="col s12 m4">
+      <img src="images/user.jpg" style="height: 250px;border-radius: 10px;" >
+    </div>
+    <% end %>
   </div>
  </li>
-<% end %>
 </ul>       
+
+

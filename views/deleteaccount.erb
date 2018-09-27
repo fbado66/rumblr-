@@ -1,4 +1,10 @@
+<br><br><br> 
+ <div class="row">
+    <div class="col s12 m5 offset-m1">
  <form action='/deleteaccount' method='POST' class='pull-right'>
     <input type='hidden' name='_method' value='DELETE'/>
-    <button type='submit' class='super-sport' value="DELETE ACCOUNT<%=@user.username%>">DELETE ACCOUNT</button>
-  </form>
+    <button class="btn waves-effect waves-light red darken-1" type="submit" value="<%=@user.username%>"
+     name="action">DELETE ACCOUNT</button>
+</form>
+</div>
+</div>

@@ -4,39 +4,41 @@
    <h5 class="title">Add Post</h5>
      <div class="body">
        <label for="title">Title</label>
-       <input name="title" type="text">
+       <input style="font-size:16px;color:white" name="title" type="text">
      </div>
      <div>
        <label for="body">class</label>
-       <textarea name="classification"> </textarea>
+       <textarea style="font-size:16px;color:white" name="classification"> </textarea>
      </div>
      <div>
        <label for="body">Body</label>
-       <textarea name="description"> </textarea>
+       <textarea style="font-size:16px;color:white" name="description"> </textarea>
      </div>
      <div class="footer">
-        <button class="btn btn-secondary">Create Post</button>
+           <button class="waves-effect waves-light btn #ffca28 amber darken-1 left">Create Post</button>
+           <a href="/kill" class="waves-effect waves-light btn red darken-1 right">DELETE POST</a>
+
      </div>
   </form>
  </div>
 </div>
 
-<br><br>
+<br>
 
 <div class="row">
-<div class='col m8 offset-m2'>
-<div><h6>All Posts</h6>
-  <a href="/alluserposts" class="btn btn-outline-light btn-sm">View</a>
-  Total: <%= @all_post %>
-  <br><br>
-  <h6>Post created by You</h6>
-  <a href="/userpost" class="btn btn-outline-light btn-sm">View</a>
-  Total: <%= @current_post %>
-  <br><br><br>  
-  <a href="/my_page" class="btn btn-outline-light btn-sm right">My Page</a>
+  <div class='col m4 offset-m2'>
+     <p style="font-size:16px;color:white">All Posts
+       <a href="/alluserposts" class="waves-effect waves-light btn #ffca28 amber darken-1"><%= @all_post %></a>
+  </p>
+    </div>
+    <div class='col m4 offset-m2'>
+     <p style="font-size:16px;color:white">Post created by You
+        <a href="/userpost" class="waves-effect waves-light btn #ffca28 amber darken-1"><%= @current_post %></a>
+             </p>
+    </div>
+  </div>
  </div>
- </div>
-</div>
+
 
 
 

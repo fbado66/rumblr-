@@ -13,34 +13,45 @@
 
 <body>
   <div class = "mynavbar" id="navbar"> 
-  <a href="/" class="button button-primary">HOME</a> 
+  <a href="/" class="waves-effect waves-light btn #ffca28 amber darken-1">HOME</a>
+
     <% if session[:user_id] %>
-      <a href="/logout" class="button button-primary">LOG OUT</a> 
-        <a href="/users" class="button button-primary">USERS</a> 
+      <a href="/logout" class="waves-effect waves-light btn #ffca28 amber darken-1">LOG OUT</a>
+      <a href="/users" class="waves-effect waves-light btn #ffca28 amber darken-1">USERS</a>
+      <a href="/my_page" class="waves-effect waves-light btn #ffca28 amber darken-1">MY PAGE</a>
     <% else %>
-      <a href="/sign_up" class="button button-primary">SIGN UP</a> 
-      <a href="/sign_in" class="button button-primary">SIGN IN</a> 
+      <a href="/sign_up" class="waves-effect waves-light btn #ffca28 amber darken-1">SIGN UP</a>
+      <a href="/sign_in" class="waves-effect waves-light btn #ffca28 amber darken-1">SIGN IN</a>
     <% end %>
   </div> 
-
+<div class="row">
+    <div class="col s12 m5 offset-m1">
   <% if flash[:info] %>
     <div id="flash-info">
       <%= flash[:info] %>
     </div>
   <% end %>
+  </div>
+</div>
 
+<div class="row">
+    <div class="col s12 m5 offset-m1">
   <% if flash[:alert] %>
-    <div id="flash-info">
+    <div id="flash-alert">
       <%= flash[:alert] %>
     </div>
   <% end %>
+  </div>
+</div>
 
-  <% if flash[:error] %>
-    <div id="flash-error">
-      <%= flash[:error] %>
-    </div>
-  <% end %>
+  
 
   <%= yield %>
+<br><br>
+<br>  <footer>
+  <div class="footer"> FC Barcelona <br>
+© Copyright FC Barcelona registered to FBado, NYCDA </div>
+<br>
+</footer>
 </body>
 </html>
