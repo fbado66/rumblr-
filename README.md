@@ -11,7 +11,7 @@ A blog, or weblog, is a platform where you can share information about a particu
  
 The task when building this website, was to create a basic blog for people who enjoy FC Barcelona Soccer. This is a blogging platform where minds come together and share their thoughts on the passion for Barcelona 
 
-Structure of the pages is as follow: 
+Structure of pages is as follow: 
 
 have a way to create an account (sign up) with at least
 first name
