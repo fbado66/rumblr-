@@ -32,7 +32,7 @@ use Activerecord to make all database transactions
 use Sinatra as the web microframework backend
 
 
-You can visit my website by clicking on the link below 
-https://salty-tor-74944.herokuapp.com/
-username: Franklin 
+You can visit my website by clicking on the link below <br/>
+https://salty-tor-74944.herokuapp.com/ <br/>
+username: Franklin <br/>
 password: 123456 
